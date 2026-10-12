@@ -2,7 +2,7 @@
 
 **Taste Every Byte of Technology**
 
-SimplyByte is an Angular + Angular Material application featuring authentication (login and registration) and a user profile experience, built with Material Design principles.
+Hari's Tech is an Angular + Angular Material application featuring authentication (login and registration) and a user profile experience, built with Material Design principles.
 
 ## Features
 * Responsive design that adapts to different screen sizes and devices.
@@ -40,15 +40,15 @@ Update `apiUrl` to point to your backend.
 npm run build
 ```
 
-The production build is output to `dist/simplybyte`.
+The production build is output to `dist/haristech`.
 
 ## Docker
 
 Build and run the app as a container:
 
 ```bash
-docker build -t simplybyte-frontend .
-docker run -p 8080:80 simplybyte-frontend
+docker build -t frontend .
+docker run -p 8080:80 frontend
 ```
 
 Then visit http://localhost:8080
