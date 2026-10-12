@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: haristech-springboot
+  datasource:
+    url: jdbc:mysql://localhost:3306/haristech?createDatabaseIfNotExist=true
+    username: root
+    password: Admin@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8090
+
+haristech:
+  message: default-message-from-application

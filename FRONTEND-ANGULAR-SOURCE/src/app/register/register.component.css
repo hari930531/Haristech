@@ -1,0 +1,173 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2.5rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Frosted glass card matching Login */
+.register-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(14, 27, 43, 0.72) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 229, 212, 0.35) !important;
+  border-radius: 16px !important;
+  padding: 2.2rem !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55),
+              inset 0 0 15px rgba(0, 229, 212, 0.08) !important;
+  color: #ffffff !important;
+  box-sizing: border-box;
+}
+
+/* Logo & Tagline */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.logo-img {
+  height: 44px;
+  width: auto;
+  filter: drop-shadow(0 0 8px rgba(0, 229, 212, 0.5));
+}
+
+.tagline {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #00e5d4;
+  letter-spacing: 1.2px;
+  margin: 0.5rem 0 0;
+  text-transform: uppercase;
+}
+
+.register-card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0.6rem 0 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+/* Layout for First / Last name row */
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Angular Material Input overrides for dark/cyan theme */
+::ng-deep .register-card .mat-mdc-form-field {
+  margin-bottom: 0.35rem;
+}
+
+::ng-deep .register-card .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+::ng-deep .register-card .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+::ng-deep .register-card .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+  border-color: rgba(0, 229, 212, 0.25) !important;
+}
+
+::ng-deep .register-card .mdc-text-field--outlined:not(.mdc-text-field--disabled):hover .mdc-notched-outline__leading,
+::ng-deep .register-card .mdc-text-field--outlined:not(.mdc-text-field--disabled):hover .mdc-notched-outline__notch,
+::ng-deep .register-card .mdc-text-field--outlined:not(.mdc-text-field--disabled):hover .mdc-notched-outline__trailing {
+  border-color: #00e5d4 !important;
+}
+
+::ng-deep .register-card .mdc-text-field--focused .mdc-notched-outline__leading,
+::ng-deep .register-card .mdc-text-field--focused .mdc-notched-outline__notch,
+::ng-deep .register-card .mdc-text-field--focused .mdc-notched-outline__trailing {
+  border-color: #00e5d4 !important;
+  border-width: 2px !important;
+}
+
+::ng-deep .register-card .mdc-text-field .mdc-text-field__input {
+  color: #ffffff !important;
+}
+
+::ng-deep .register-card .mat-mdc-floating-label {
+  color: #94a3b8 !important;
+}
+
+::ng-deep .register-card .mdc-text-field--focused .mat-mdc-floating-label {
+  color: #00e5d4 !important;
+}
+
+/* Neon Cyan Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem 1rem !important;
+  margin-top: 0.8rem;
+  background: linear-gradient(135deg, #00e5d4, #00b4d8) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  color: #0b1320 !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 15px rgba(0, 229, 212, 0.4) !important;
+  transition: all 0.25s ease !important;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  opacity: 0.92;
+  box-shadow: 0 0 22px rgba(0, 229, 212, 0.6) !important;
+  transform: translateY(-1px);
+}
+
+button[type="submit"]:disabled {
+  background: rgba(0, 229, 212, 0.25) !important;
+  color: #64748b !important;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}
+
+/* Error message */
+.error {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Extra links at bottom */
+.extra-links {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+
+.extra-links .link {
+  color: #00e5d4;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.extra-links .link:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(0, 229, 212, 0.5);
+}

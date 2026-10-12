@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0b1320;
+  background-image: url('assets/bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+/* --- Fix Angular Material Button Alignment --- */
+button.login-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 16px !important;
+  height: 44px !important;
+  line-height: normal !important;
+}
+
+button.login-btn .mdc-button__label,
+button.login-btn .mat-button-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  line-height: normal !important;
+  vertical-align: middle !important;
+}
+
+/* Remove default MDC touch target spacer that pushes text down */
+button.login-btn .mat-mdc-button-touch-target {
+  display: none !important;
+}

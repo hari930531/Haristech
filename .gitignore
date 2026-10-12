@@ -1,0 +1,7 @@
+.angular/
+.node_modules/
+.taget/
+.vscode/
+dist/
+*.class
+*.logs

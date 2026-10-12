@@ -1,0 +1,70 @@
+<!-- Header -->
+<header class="app-header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Hari's Tech Logo" />
+    <span class="app-title">Hari's Tech</span>
+  </div>
+  <nav class="nav-links">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/profile" class="active">Profile</a>
+    <button mat-button class="logout-btn" (click)="logout()">Logout</button>
+  </nav>
+</header>
+
+<!-- Main Profile Content -->
+<main class="profile-wrapper" *ngIf="userProfile; else loadingOrError">
+  <div class="glass-card">
+    
+    <!-- Profile Identity Header -->
+    <div class="profile-header-content">
+      <div class="profile-image">
+        <img src="https://i.pravatar.cc/300" alt="User Profile Picture" />
+      </div>
+      <div class="profile-info">
+        <h1>{{ userProfile.firstName }} {{ userProfile.lastName }}</h1>
+        <p class="username">@{{ userProfile.username }}</p>
+      </div>
+    </div>
+
+    <!-- Tabs Section -->
+    <mat-tab-group class="custom-tabs" animationDuration="200ms">
+      <mat-tab label="About">
+        <div class="tab-content">
+          <h3>About</h3>
+          <div class="info-row">
+            <span class="info-label">Email:</span>
+            <span class="info-value">{{ userProfile.email }}</span>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Posts">
+        <div class="tab-content">
+          <h3>Posts</h3>
+          <p class="empty-state">No posts yet.</p>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Images">
+        <div class="tab-content">
+          <h3>Images</h3>
+          <p class="empty-state">No images uploaded yet.</p>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="app-footer">
+  <p>&copy; 2026 Hari's Tech. All rights reserved.</p>
+</footer>
+
+<!-- Loading/Error Template -->
+<ng-template #loadingOrError>
+  <div class="loading-container">
+    <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+    <p *ngIf="!errorMessage" class="loading">Loading profile...</p>
+  </div>
+</ng-template>
